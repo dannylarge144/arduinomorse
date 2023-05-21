@@ -74,15 +74,13 @@ void sendDigital (int pin, String message) {
 
 char morse2char (String m) {
   int c = 0;
-  char o = '?';
   for (c = 0; c < 37; c++) {
     if (m.equals (String(morse[c]))) {
-      char o = alph[c];
       return alph[c];
       break;
     }
   }
-  return o;
+  return '?';
 }
 
 String duration2morse (int* durations, int len) {
